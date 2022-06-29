@@ -118,5 +118,49 @@ header {
         margin-left: 355px;
     }
 
+/* TELA 2 */
+
+
+/* TELA 3 */
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.questions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    background-color: white;
+    padding: 21px 0 24px 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+}
+
+.questions input{
+    width: 92%;
+    height: 46px;
+    margin-bottom: 9px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 14px;  
+}
+
+button{
+    margin-top: 85px;
+    width: 368px;
+    height: 54px;
+    background-color: #EC362D;
+    border: none;
+    border-radius: 15px;
+    color: white;
+}
+
+.hidden{
+    display: none;
+}
 
 }
