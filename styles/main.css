@@ -39,8 +39,12 @@ header {
     margin: 40px 0;
 }
 
-.criar-quiz {
-    margin: 100px 0;
+.ion-icon-1 {
+    margin-left: 10px;
+}
+
+.create-quiz {
+    margin: 50px 0;
     height: 181px;
     width: 1050px;
     display: flex;
@@ -52,13 +56,36 @@ header {
     gap: 20px;
 }
 
+.title-1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+}
+
+
+.title-2 {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
 .quizzes {
     width: 1050px;
     display: flex;
     flex-direction: column;
+    margin: 10px 0;
 }
 
-.criar-quiz p {
+.upfront {
+    margin: 100px 0;
+}
+
+.create-quiz p {
     text-align: center;
     color: #B9B9B9;
     line-height: 23px;
@@ -66,7 +93,7 @@ header {
     font-weight: 400;
 }
 
-.criar-quiz a {
+.create-quiz a {
     display: inline-block;
     padding: 5px 30px;
     border: 2px dashed #EC362D;
@@ -77,9 +104,24 @@ header {
     font-size: 21px;
 }
 
+ion-icon {
+    font-size: 30px;
+}
 
-.quiz-lista-1 {
+.ion-icon-1 {
+    color: red;
+}
+
+.my-quizzes {
     display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+
+.quiz-list-1 {
+    display: flex;
+    flex-wrap: wrap;
     gap: 15px;
 }
 
@@ -87,15 +129,17 @@ header {
     margin-bottom: 20px;
 }
 
-
-.quiz-lista-2 {
-    margin-top: 10px;
-    display: flex;
-    gap: 15px;
-}
-
 .quiz {
     position: relative;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.none {
+    display: none;
 }
 
 .quiz p {
@@ -106,32 +150,48 @@ header {
 }
 
 @media (max-width: 1100px) {
-    main {
+
+    .title-1 {
+        width: 340px;
+        justify-content: space-between;
+    }
+
+    .title-2 {
         width: 340px;
         display: flex;
+        justify-content: space-between;
+    }
+
+    .none {
+        display: none;
+    }
+
+    .my-quizzes {
+        flex-direction: column;
+    }
+
+    .upfront {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .margin-mobile {
+        margin-right: 220px;
+    }
+
+    .quizzes {
+        align-items: center;
+    }
+
+    .create-quiz {
+        width: 340px;
+    }
+
+    .quiz-list-1 {
         flex-direction: column;
         align-items: center;
-        justify-content:center;
-        margin-bottom: 20px;
     }
 
-    .criar-quiz {
-        width: 100%;
-    }
-
-    .quiz-lista-1 {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .quiz-lista-2 {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .paragrafo {
-        margin-left: 355px;
-    }
 
     /* TELA 2 */
 
