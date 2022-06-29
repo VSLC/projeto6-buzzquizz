@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
 
+* {
+    box-sizing: border-box;
+}
 
 body {
     background-color: #E5E5E5;;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
 }
 
 header {
@@ -27,6 +26,12 @@ header {
 }
 
 /* TELA 1 */
+
+.upfront{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
 .criar-quiz {
     margin: 80px 0;
@@ -190,7 +195,7 @@ h3{
     font-size: 23px;
 }
 
-.content.hiden{
+.content.hidden{
     flex-direction: row;
     justify-content: space-between;
     height: 74px;
@@ -198,11 +203,11 @@ h3{
     padding: 21px 25px 24px 0;
 }
 
-.content.hiden ion-icon{
+.content.hidden ion-icon{
     font-size: 26px;
 }
 
-.hidden{
+.hide{
     display: none;
 }
 
