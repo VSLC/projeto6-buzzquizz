@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+
+
+body {
+    background-color: #E5E5E5;;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    height: 70px;
+    background-color: #EC362D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 37px;
+    color: #fff;
+}
+
+.criar-quiz {
+    margin: 80px 0;
+    height: 181px;
+    width: 1050px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px dashed #d5d5d5;
+    border-radius: 5px;
+    gap: 20px;
+}
+
+.quizzes {
+    width: 1050px;
+    display: flex;
+    flex-direction: column;
+}
+
+.criar-quiz p {
+    text-align: center;
+    color: #B9B9B9;
+    line-height: 23px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.criar-quiz a {
+    display: inline-block;
+    padding: 5px 30px;
+    border: 2px dashed #EC362D;
+    border-radius: 20px;
+    background-color: #E5E5E5;
+    color: #EC362D;
+    text-decoration: none;
+    font-size: 21px;
+}
+
+
+.quiz-lista-1 {
+    display: flex;
+    gap: 15px;
+}
+
+.margin-1 {
+    margin-bottom: 20px;
+}
+
+
+.quiz-lista-2 {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.quiz {
+    position: relative;
+}
+
+.quiz p {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    color: #fff;
+}
+
+@media (max-width: 1100px) {
+    main {
+        width: 340px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .criar-quiz {
+        width: 100%;
+    }
+
+    .quiz-lista-1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quiz-lista-2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paragrafo {
+        margin-left: 355px;
+    }
+
+
+}
