@@ -51,7 +51,7 @@ function createQuestions(){
 
         if(i === 0){
             questionScreen.innerHTML += `<div class="question${i+1}">
-        <section class="content questions">
+            <section class="content questions showing">
             <h4>Pergunta ${i+1}</h4>
             <article class="question">
                 <input type="text" placeholder="Texto da pergunta">
@@ -79,7 +79,7 @@ function createQuestions(){
         
         <section class="content hidden hide">
             <h4>Pergunta ${i+1}</h4>
-            <ion-icon name="create-outline"></ion-icon>
+            <ion-icon name="create-outline" onclick="show(this)"></ion-icon>
         </section>
         </div>`;
         }else {
@@ -112,7 +112,7 @@ function createQuestions(){
             
             <section class="content hidden">
                 <h4>Pergunta ${i+1}</h4>
-                <ion-icon name="create-outline"></ion-icon>
+                <ion-icon name="create-outline" onclick="show(this)"></ion-icon>
             </section>
             </div>`;
         }
@@ -124,6 +124,20 @@ function createQuestions(){
 
 }
 
+function show(element){
+    let hidenInputs = element.parentNode;
+    let showInputs =  hidenInputs.parentNode.querySelector(".questions");
+
+    let showingInputs = document.querySelector(".showing");
+    let hideInputs = showingInputs.parentNode.querySelector(".hiden");
+    showingInputs.classList.remove("showing");
+    showingInputs.classList.add("some");
+    hideInputs.classList.remove("some");
+
+    hidenInputs.classList.add("some");
+    showInputs.classList.remove("some");
+    showInputs.classList.add("showing");
+}
 
 function createLevels(){
     let questionScreen = document.querySelector(".ask");
