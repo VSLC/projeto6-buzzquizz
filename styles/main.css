@@ -307,10 +307,6 @@ padding: 21px 25px 24px 0;
 font-size: 26px;
 }
 
-.hide {
-display: none;
-}
-
 .container.levels h3, input{
     margin-left: 16px;
 }
@@ -348,3 +344,8 @@ p{
     font-size: 21px;
     color: #818181;
 }
+
+.hide {
+    display: none;
+    }
+    
