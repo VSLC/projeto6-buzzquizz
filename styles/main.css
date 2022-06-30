@@ -265,6 +265,7 @@ border: none;
 border-radius: 15px;
 color: white;
 font-size: 21px;
+cursor: pointer;
 }
 
 .question {
@@ -333,6 +334,7 @@ display: none;
     width: 220px;
     height: 44px;
     margin: 45px 0 0 0;
+    cursor: pointer;
 }
 
 .finish h3{
