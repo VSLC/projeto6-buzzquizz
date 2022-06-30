@@ -19,13 +19,13 @@
     </header>
 
     <main>
-        <div class="upfront">
-            <div class="criar-quiz">
-                <p> Você não criou nenhum <br> quiz ainda :( </p>
+        <div class="upfront hide">
+            <div class="criar-quiz none">
+                <p> Você não criou nenhum <br> quizz ainda :( </p>
                 <a href="/">Criar Quiz</a>
             </div>
 
-            <div class="quizzes">
+            <div class="quizzes hide">
 
                 <div class="paragrafo">
                     <p class="margin-1 align-mobile">Todos os quizzes</p>
@@ -44,9 +44,6 @@
                         <img src="imgs/quiz-image.png" />
                         <p>O quanto você é de boas</p>
                     </div>
-                </div>
-
-                <div class="quiz-lista-2">
                     <div class="quiz">
                         <img src="imgs/quiz-image.png" />
                         <p>O quanto você é de boas</p>
@@ -64,110 +61,166 @@
         </div>
 
         <!-- Tela 2-->
-        <header>
-            <h1 class="logo">BuzzQuiz</h1>
-        </header>
-         <main class="upfront">
-            <div class="seus-quizzes">
-                <div><p> <b>Seus Quizzes</b></p><ion-icon name="add-circle"></ion-icon></div>
-            <div class="criar-quizFinal">
-                <img src="imgs/HP.png" />
-                <img src="imgs/Ex BBB.png" />
-            </div>
-            </div>
-    
-            <div class="quizzes">
-    
-                <div class="paragrafo">
-                    <p class="margin-1 align-mobile"><b>Todos os quizzes</b></p>
-                </div>
-    
-                <div class="quiz-lista-1">
-                    <div class="quiz">
-                        <img src="imgs/quiz-image.png" />
-                        <p>O quanto você é de boas</p>
-                    </div>
-                    <div class="quiz">
-                        <img src="imgs/quiz-image.png" />
-                        <p>O quanto você é de boas</p>
-                    </div>
-                    <div class="quiz">
-                        <img src="imgs/quiz-image.png" />
-                        <p>O quanto você é de boas</p>
-                    </div>
-                </div>
-    
-                <div class="quiz-lista-2">
-                    <div class="quiz">
-                        <img src="imgs/quiz-image.png" />
-                        <p>O quanto você é de boas</p>
-                    </div>
-                    <div class="quiz">
-                        <img src="imgs/quiz-image.png" />
-                        <p>O quanto você é de boas</p>
-                    </div>
-                    <div class="quiz">
-                        <img src="imgs/quiz-image.png" />
-                        <p>O quanto você é de boas</p>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-
-
-        <!-- Criação do Quiz: Informações básicas do quiz -->
-
-        <div class="container basics">
-            <h3>Comece pelo começo</h3>
-            <section class="content">
-                <input class="title" type="text" placeholder="Título do seu quizz">
-                <input class="URL" type="text" placeholder="URL da imagem do seu quizz">
-                <input class="questions-number" type="text" placeholder="Quantidade de perguntas do quizz">
-                <input class="levels-number" type="text" placeholder="Quantidade de níveis do quizz">
-            </section>
-            <button onclick="createQuestions()">Prosseguir pra criar perguntas</button>
+        <div class="quiz-image">
+            <p class="quiz-title">O quão Potterhead é você?</p>
         </div>
 
-        <!-- Criação do Quiz: Perguntas do quiz -->
+        <div class="container">
+            <div class="quiz-container">
+                <div class="quiz-question">
+                    <h4>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</h4>
+                </div>
+                <div class="quiz-answer">
+                    <div class="quiz-answer-items">
+                        <img src="/imgs/cat.png">
+                        <p>gatineo</p>
+                    </div>
+                    <div class="quiz-answer-items">
+                        <img src="/imgs/cat.png">
+                        <p>gatineo</p>
+                    </div>
+                    <div class="quiz-answer-items">
+                        <img src="/imgs/cat.png">
+                        <p>gatineo</p>
+                    </div>
+                    <div class="quiz-answer-items">
+                        <img src="/imgs/cat.png">
+                        <p>gatineo</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-container">
+                <div class="quiz-question">
+                    <div class="quiz-question-header">
+                        <h4>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</h4>
+                    </div>
+                </div>
+                <div class="quiz-answer">
+                    <div class="quiz-answer-items">
+                        <img src="/imgs/cat.png">
+                        <p>gatineo</p>
+                    </div>
+                    <div class="quiz-answer-items">
+                        <img src="/imgs/cat.png">
+                        <p>gatineo</p>
+                    </div>
+                    <div class="quiz-answer-items">
+                        <img src="/imgs/cat.png">
+                        <p>gatineo</p>
+                    </div>
+                    <div class="quiz-answer-items">
+                        <img src="/imgs/cat.png">
+                        <p>gatineo</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="quiz-container">
+                <div class="quiz-question">
+                    <div class="quiz-question-header">
+                        <h4>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</h4>
+                    </div>
+                </div>
+                <div class="quiz-answer">
+                    <div class="quiz-answer-items">
+                        <img src="/imgs/cat.png">
+                        <p>gatineo</p>
+                    </div>
+                    <div class="quiz-answer-items">
+                        <img src="/imgs/cat.png">
+                        <p>gatineo</p>
+                    </div>
+                    <div class="quiz-answer-items">
+                        <img src="/imgs/cat.png">
+                        <p>gatineo</p>
+                    </div>
+                    <div class="quiz-answer-items">
+                        <img src="/imgs/cat.png">
+                        <p>gatineo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz-level">
+                <div class="quiz-grade">
+                    <h4>88% de acerto: Você é praticamente um aluno de Hogwarts!</h4>
+                </div>
+                <div class="quiz-image-message">
+                    <div class="quiz-answer-items-2">
+                        <img src="/imgs/cat.png">
+                    </div>
+                        <p>Parabéns Potterhead! Bem-vindx a <br> Hogwarts, aproveite o loop infinito de <br> comida 
+                            e clique no botão abaixo para <br> usar o vira-tempo e <br> reiniciar este teste.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="quiz-level-button-link">
+                    <button class="quiz-level-button-1">Reiniciar Quiz</button>
+                    <a class="quiz-level-link" href="/">
+                        Voltar para home
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Tela 3.1-->
+
+        <div class="container basics hide">
+            <h3>Comece pelo começo</h3>
+            <section class="content">
+                <input type="text" placeholder="Título do seu quizz">
+                <input type="text" placeholder="URL da imagem do seu quizz">
+                <input type="text" placeholder="Quantidade de perguntas do quizz">
+                <input type="text" placeholder="Quantidade de níveis do quizz">
+            </section>
+            <button>Prosseguir pra criar perguntas</button>
+        </div>
+
+        <!-- TELA 3.2 -->
 
         <div class="container ask hide">
-            <!-- <h3>Crie suas perguntas</h3>
+            <h3>Crie suas perguntas</h3>
             <section class="content questions">
                 <h4>Pergunta 1</h4>
                 <article class="question">
-                    <input type="text" placeholder="Texto da pergunta">
-                    <input type="text" placeholder="Cor de fundo da pergunta">
+                    <input type="text" placeholder="Título do seu quizz">
+                    <input type="text" placeholder="URL da imagem do seu quizz">
                 </article>
                 <h4>Resposta correta</h4>
                 <article class="question right-answer">
-                    <input type="text" placeholder="Resposta correta">
-                    <input type="text" placeholder="URL da imagem">
+                    <input type="text" placeholder="Título do seu quizz">
+                    <input type="text" placeholder="URL da imagem do seu quizz">
                 </article>
                 <h4>Respostas incorretas</h4>
                 <article class="question wrong-answer">
-                    <input type="text" placeholder="Resposta incorreta 1">
-                    <input type="text" placeholder="URL da imagem">
+                    <input type="text" placeholder="Título do seu quizz">
+                    <input type="text" placeholder="URL da imagem do seu quizz">
                 </article>
                 <article class="question wrong-answer">
-                    <input type="text" placeholder="Resposta incorreta 2">
-                    <input type="text" placeholder="URL da imagem 2">
+                    <input type="text" placeholder="Título do seu quizz">
+                    <input type="text" placeholder="URL da imagem do seu quizz">
                 </article>
                 <article class="question wrong-answer">
-                    <input type="text" placeholder="Resposta incorreta 3">
-                    <input type="text" placeholder="URL da imagem 3">
+                    <input type="text" placeholder="Título do seu quizz">
+                    <input type="text" placeholder="URL da imagem do seu quizz">
                 </article>
-            </section> -->
+            </section>
 
-            <!-- <section class="content hidden">
+            <section class="content hidden">
                 <h4>Pergunta 2</h4>
                 <ion-icon name="create-outline"></ion-icon>
-            </section> -->
+            </section>
 
-           <!-- <button onclick="createLevels()">Prosseguir pra criar níveis</button> -->
+            <button>Prosseguir pra criar níveis</button>
         </div>
-        
-        <!-- Criação do Quiz: Níveis do Quiz -->
+
+        <!-- TELA 3.3 -->
 
         <div class="container levels hide">
             <h3>Agora, decida os níveis</h3>
@@ -178,35 +231,34 @@
                 <input type="text" placeholder="URL da imagem do nível">
                 <input type="text" placeholder="Descrição do nível">
             </section>
-    
+
             <section class="content hidden">
                 <h4>Nível 2</h4>
                 <ion-icon name="create-outline"></ion-icon>
             </section>
 
-        <!-- Criação do Quizz: Sucesso do Quiz -->
-    
-            <button onclick="finishQuizz()">Finalizar Quiz</button>
+            <!-- TELA 3.4 -->
+
+            <button>Finalizar Quizz</button>
         </div>
-    
+
         <div class="container finish hide">
-            <h3>Seu quiz está pronto!</h3>
+            <h3>Seu quizz está pronto!</h3>
             <div class="quizz-finished">
-                <img src="imgs/hogwarts.jpg">
+                <img src="assets/Rectangle 34.png">
                 <span>O quão Potterhead é você?</span>
-            </div>        
+            </div>
             <button>Acessar Quizz</button>
             <p>Voltar pra home</p>
         </div>
-    
 
-    </main>    
+
+    </main>
 
     <!-- Scripts-->
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <!-- <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/script.js"></script>
 </body>

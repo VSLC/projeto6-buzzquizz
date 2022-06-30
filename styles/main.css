@@ -102,7 +102,9 @@ header {
     text-decoration: none;
     font-size: 21px;
 }
+
 /* TELA 2 */
+
 .criar-quizFinal{
     height: 181px;
     width: 680px;
@@ -346,5 +348,3 @@ p{
     font-size: 21px;
     color: #818181;
 }
-
-
