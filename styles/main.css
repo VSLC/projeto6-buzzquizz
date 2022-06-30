@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #fafafa;
+    background-color: #E5E5E5;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -137,6 +137,40 @@ b {
     font-weight: bold;
 }
 
+/* TELA 2 */
+.criar-quizFinal {
+    height: 181px;
+    width: 680px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    gap: 20px;
+}
+
+.seus-quizzes {
+    margin: 80px 0;
+    height: 181px;
+    width: 680px;
+}
+
+.seus-quizzes ion-icon {
+    color: #EC362D;
+    width: 30px;
+    height: 30px;
+}
+
+.seus-quizzes :nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+b {
+    font-weight: bold;
+}
+
 ion-icon {
     font-size: 30px;
 }
@@ -191,6 +225,9 @@ ion-icon {
     background-image: url(/imgs/HP.png);
     background-repeat: repeat-x;
     height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -198,9 +235,7 @@ ion-icon {
     color: #FFFFFF;
     font-size: 40px;
     font-weight: 400;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 50px;
 }
 
 .quiz-question {
@@ -224,7 +259,7 @@ ion-icon {
 }
 
 .quiz-grade {
-    width: 650px;
+    width: 730px;
     height: 99px;
     background-color: red;
     display: flex;
@@ -234,7 +269,7 @@ ion-icon {
 }
 
 .quiz-level {
-    background-color: #fff;
+    background-color: #fafafa;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -285,6 +320,19 @@ ion-icon {
     margin: -30px 0px 20px 0px;
 }
 
+.quiz-button-link {
+    display: flex;
+    flex-direction: column;
+}
+
+.quiz-button-link a {
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #818181;
+    font-size: 21px;
+}
+
 
 
 @media (max-width: 1100px) {
@@ -331,13 +379,15 @@ ion-icon {
     }
 }
 
+<<<<<<< HEAD
 /* TELA 2 */
-
-
+=======
+/* TELA 2 */
+>>>>>>>1fe8659f1b1e8ac059c87b1d5e1ff4d90dfe6de3
 /* TELA 3 */
 
 .container {
-    display: flex;
+    <<<<<<< HEAD display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -416,3 +466,126 @@ h3 {
 .hide {
     display: none;
 }
+
+=======display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    background-color: white;
+    padding: 21px 0 24px 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+}
+
+.content.questions {
+    align-items: flex-start;
+}
+
+.content input {
+    width: 92%;
+    height: 46px;
+    margin-bottom: 9px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 14px;
+}
+
+button {
+    margin: 85px 0 50px 0;
+    width: 368px;
+    height: 54px;
+    background-color: #EC362D;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.question {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.question.wrong-answer {
+    margin-bottom: 32px;
+}
+
+.question.wrong-answer:last-child {
+    margin-bottom: 0;
+}
+
+h4 {
+    margin-left: 17px;
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 23px;
+}
+
+.content.hidden {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 74px;
+    margin-top: 24px;
+    padding: 21px 25px 24px 0;
+}
+
+.content.hidden ion-icon {
+    font-size: 26px;
+}
+
+.hide {
+    display: none;
+}
+
+.container.levels h3,
+input {
+    margin-left: 16px;
+}
+
+.quizz-finished {
+    position: relative;
+}
+
+.quizz-finished img {
+    width: 500px;
+    height: 266px;
+    border-radius: 5px;
+}
+
+.quizz-finished span {
+    position: absolute;
+    left: 23px;
+    bottom: 23px;
+    color: white;
+    font-size: 23px;
+}
+
+.finish button {
+    width: 220px;
+    height: 44px;
+    margin: 45px 0 0 0;
+    cursor: pointer;
+}
+
+.finish h3 {
+    margin-bottom: 46px;
+}
+
+p {
+    font-size: 21px;
+    color: #818181;
+}
+
+
+>>>>>>>1fe8659f1b1e8ac059c87b1d5e1ff4d90dfe6de3
