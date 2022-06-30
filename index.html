@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/reset.css">
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
     <title>Buzzquiz</title>
 </head>
 
@@ -19,13 +19,13 @@
     </header>
 
     <main>
-        <div class="upfront none">
+        <div class="upfront hide">
             <div class="criar-quiz none">
                 <p> Você não criou nenhum <br> quizz ainda :( </p>
                 <a href="/">Criar Quiz</a>
             </div>
 
-            <div class="quizzes none">
+            <div class="quizzes hide">
 
                 <div class="paragrafo">
                     <p class="margin-1 align-mobile">Todos os quizzes</p>
@@ -33,27 +33,27 @@
 
                 <div class="quiz-lista-1">
                     <div class="quiz">
-                        <img src="/imgs/quiz-image.png" />
+                        <img src="imgs/quiz-image.png" />
                         <p>O quanto você é de boas</p>
                     </div>
                     <div class="quiz">
-                        <img src="/imgs/quiz-image.png" />
+                        <img src="imgs/quiz-image.png" />
                         <p>O quanto você é de boas</p>
                     </div>
                     <div class="quiz">
-                        <img src="/imgs/quiz-image.png" />
+                        <img src="imgs/quiz-image.png" />
                         <p>O quanto você é de boas</p>
                     </div>
                     <div class="quiz">
-                        <img src="/imgs/quiz-image.png" />
+                        <img src="imgs/quiz-image.png" />
                         <p>O quanto você é de boas</p>
                     </div>
                     <div class="quiz">
-                        <img src="/imgs/quiz-image.png" />
+                        <img src="imgs/quiz-image.png" />
                         <p>O quanto você é de boas</p>
                     </div>
                     <div class="quiz">
-                        <img src="/imgs/quiz-image.png" />
+                        <img src="imgs/quiz-image.png" />
                         <p>O quanto você é de boas</p>
                     </div>
                 </div>
@@ -62,8 +62,7 @@
 
         <!-- Tela 2-->
         <div class="quiz-image">
-            <img src="/imgs/harry-potter-screenshot.jpg">
-            <p>O quão Potterhead é você?</p>
+            <p class="quiz-title">O quão Potterhead é você?</p>
         </div>
 
         <div class="container">
@@ -143,15 +142,36 @@
                     </div>
                 </div>
             </div>
+            <div class="quiz-level">
+                <div class="quiz-grade">
+                    <h4>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</h4>
+                </div>
+                <div class="quiz-image-message">
+                    <div class="quiz-answer-items-2">
+                        <img src="/imgs/cat.png">
+                    </div>
+                        <p>Parabéns Potterhead! Bem-vindx a <br> Hogwarts, aproveite o loop infinito de <br> comida 
+                            e clique no botão abaixo para <br> usar o vira-tempo e <br> reiniciar este teste.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="quiz-level-button-link">
+                    <button class="quiz-level-button">Reiniciar Quiz</button>
+                    <a class="quiz-level-link" href="/">
+                        Voltar para home
+                    </a>
+                </div>
+            </div>
         </div>
 
 
 
 
 
-        <!-- Tela 3-->
+        <!-- Tela 3.1-->
 
-        <div class="container hide none">
+        <div class="container basics hide">
             <h3>Comece pelo começo</h3>
             <section class="content">
                 <input type="text" placeholder="Título do seu quizz">
@@ -162,7 +182,9 @@
             <button>Prosseguir pra criar perguntas</button>
         </div>
 
-        <div class="container none">
+        <!-- TELA 3.2 -->
+
+        <div class="container ask hide">
             <h3>Crie suas perguntas</h3>
             <section class="content questions">
                 <h4>Pergunta 1</h4>
@@ -197,6 +219,40 @@
 
             <button>Prosseguir pra criar níveis</button>
         </div>
+
+        <!-- TELA 3.3 -->
+
+        <div class="container levels hide">
+            <h3>Agora, decida os níveis</h3>
+            <section class="content questions">
+                <h3>Nível 1</h3>
+                <input type="text" placeholder="Título do nível">
+                <input type="text" placeholder="% de acerto mínima">
+                <input type="text" placeholder="URL da imagem do nível">
+                <input type="text" placeholder="Descrição do nível">
+            </section>
+
+            <section class="content hidden">
+                <h4>Nível 2</h4>
+                <ion-icon name="create-outline"></ion-icon>
+            </section>
+
+            <!-- TELA 3.4 -->
+
+            <button>Finalizar Quizz</button>
+        </div>
+
+        <div class="container finish hide">
+            <h3>Seu quizz está pronto!</h3>
+            <div class="quizz-finished">
+                <img src="assets/Rectangle 34.png">
+                <span>O quão Potterhead é você?</span>
+            </div>
+            <button>Acessar Quizz</button>
+            <p>Voltar pra home</p>
+        </div>
+
+
     </main>
 
     <!-- Scripts-->
@@ -204,7 +260,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="/js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
