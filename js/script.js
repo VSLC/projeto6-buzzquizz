@@ -32,6 +32,11 @@ let quizz = {
 let questionsNumber = 0;
 let levelsNumber = 0;
 
+function mostrarTela3(){
+    document.querySelector("upFront").classList.add("hide");
+    document.querySelector("")
+}
+
 
 function createQuestions(){
     let basicScreen = document.querySelector(".basics");
