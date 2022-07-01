@@ -18,19 +18,38 @@
 
     <header><h1 class="logo">BuzzQuiz</h1></header>
     <main>
-        <div class="upfront hide">
-            <div class="criar-quiz none">
+        <div class="upfront">
+            <div class="create-quiz">
                 <p> Você não criou nenhum <br> quizz ainda :( </p>
-                <a href="/">Criar Quiz</a>
+                <a href="/" onclick = "mostrarTela3();">Criar Quiz</a>
             </div>
 
-            <div class="quizzes hide">
+            <div class="quizzes">
 
-                <div class="paragrafo">
-                    <p class="margin-1 align-mobile">Todos os quizzes</p>
+                <div class="quizzes-title hide">
+                    <h3>Seus Quizzes</h3>
+                    <ion-icon name="add-circle" onclick = "mostrarTela3();"></ion-icon>
                 </div>
 
-                <div class="quiz-lista-1">
+                <div class="my-quizzes hide">
+
+                    <div class="quiz">
+                        <img src="imgs/quiz-image.png" />
+                        <p>O quanto você é de boas</p>
+                    </div>
+
+                    <div class="quiz">
+                        <img src="imgs/quiz-image.png" />
+                        <p>O quanto você é de boas</p>
+                    </div>
+
+                </div>
+
+                <div class="paragraph">
+                    <h3 class="margin-1">Todos os quizzes</h3>
+                </div>
+
+                <div class="quiz-list">
                     <div class="quiz">
                         <img src="imgs/quiz-image.png" />
                         <p>O quanto você é de boas</p>
@@ -59,98 +78,99 @@
             </div>
         </div>
 
-        <!-- Tela 2 LISTAR QUIZZES-->
+        <!-- Tela 2-->
+        <div class="tela-2 hide">
 
-        <div class="quiz-image">
-            <p class="quiz-title">O quão Potterhead é você?</p>
-        </div>
-
-        <div class="container">
-            <div class="quiz-container">
-                <div class="quiz-question">
-                    <h4>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</h4>
-                </div>
-                <div class="quiz-answer">
-                    <div class="quiz-answer-items">
-                        <img src="/imgs/cat.png">
-                        <p>gatineo</p>
-                    </div>
-                    <div class="quiz-answer-items">
-                        <img src="/imgs/cat.png">
-                        <p>gatineo</p>
-                    </div>
-                    <div class="quiz-answer-items">
-                        <img src="/imgs/cat.png">
-                        <p>gatineo</p>
-                    </div>
-                    <div class="quiz-answer-items">
-                        <img src="/imgs/cat.png">
-                        <p>gatineo</p>
-                    </div>
-                </div>
+            <div class="quiz-image">
+                <p class="quiz-title">O quão Potterhead é você?</p>
             </div>
 
-            <div class="quiz-container">
-                <div class="quiz-question">
-                    <div class="quiz-question-header">
+            <div class="container">
+                <div class="quiz-container">
+                    <div class="quiz-question">
                         <h4>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</h4>
                     </div>
+                    <div class="quiz-answer">
+                        <div class="quiz-answer-items">
+                            <img src="/imgs/cat.png">
+                            <p>gatineo</p>
+                        </div>
+                        <div class="quiz-answer-items">
+                            <img src="/imgs/cat.png">
+                            <p>gatineo</p>
+                        </div>
+                        <div class="quiz-answer-items">
+                            <img src="/imgs/cat.png">
+                            <p>gatineo</p>
+                        </div>
+                        <div class="quiz-answer-items">
+                            <img src="/imgs/cat.png">
+                            <p>gatineo</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="quiz-answer">
-                    <div class="quiz-answer-items">
-                        <img src="/imgs/cat.png">
-                        <p>gatineo</p>
+
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <div class="quiz-question-header">
+                            <h4>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</h4>
+                        </div>
                     </div>
-                    <div class="quiz-answer-items">
-                        <img src="/imgs/cat.png">
-                        <p>gatineo</p>
-                    </div>
-                    <div class="quiz-answer-items">
-                        <img src="/imgs/cat.png">
-                        <p>gatineo</p>
-                    </div>
-                    <div class="quiz-answer-items">
-                        <img src="/imgs/cat.png">
-                        <p>gatineo</p>
+                    <div class="quiz-answer">
+                        <div class="quiz-answer-items">
+                            <img src="/imgs/cat.png">
+                            <p>gatineo</p>
+                        </div>
+                        <div class="quiz-answer-items">
+                            <img src="/imgs/cat.png">
+                            <p>gatineo</p>
+                        </div>
+                        <div class="quiz-answer-items">
+                            <img src="/imgs/cat.png">
+                            <p>gatineo</p>
+                        </div>
+                        <div class="quiz-answer-items">
+                            <img src="/imgs/cat.png">
+                            <p>gatineo</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
 
-            <div class="quiz-container">
-                <div class="quiz-question">
-                    <div class="quiz-question-header">
-                        <h4>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</h4>
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <div class="quiz-question-header">
+                            <h4>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</h4>
+                        </div>
+                    </div>
+                    <div class="quiz-answer">
+                        <div class="quiz-answer-items">
+                            <img src="/imgs/cat.png">
+                            <p>gatineo</p>
+                        </div>
+                        <div class="quiz-answer-items">
+                            <img src="/imgs/cat.png">
+                            <p>gatineo</p>
+                        </div>
+                        <div class="quiz-answer-items">
+                            <img src="/imgs/cat.png">
+                            <p>gatineo</p>
+                        </div>
+                        <div class="quiz-answer-items">
+                            <img src="/imgs/cat.png">
+                            <p>gatineo</p>
+                        </div>
                     </div>
                 </div>
-                <div class="quiz-answer">
-                    <div class="quiz-answer-items">
-                        <img src="/imgs/cat.png">
-                        <p>gatineo</p>
+                <div class="quiz-level">
+                    <div class="quiz-grade">
+                        <h4>88% de acerto: Você é praticamente um aluno de Hogwarts!</h4>
                     </div>
-                    <div class="quiz-answer-items">
-                        <img src="/imgs/cat.png">
-                        <p>gatineo</p>
-                    </div>
-                    <div class="quiz-answer-items">
-                        <img src="/imgs/cat.png">
-                        <p>gatineo</p>
-                    </div>
-                    <div class="quiz-answer-items">
-                        <img src="/imgs/cat.png">
-                        <p>gatineo</p>
-                    </div>
-                </div>
-            </div>
-            <div class="quiz-level">
-                <div class="quiz-grade">
-                    <h4>88% de acerto: Você é praticamente um aluno de Hogwarts!</h4>
-                </div>
-                <div class="quiz-image-message">
-                    <div class="quiz-answer-items-2">
-                        <img src="/imgs/cat.png">
-                    </div>
-                        <p>Parabéns Potterhead! Bem-vindx a <br> Hogwarts, aproveite o loop infinito de <br> comida 
+                    <div class="quiz-image-message">
+                        <div class="quiz-answer-items-2">
+                            <img src="/imgs/cat.png">
+                        </div>
+                        <p>Parabéns Potterhead! Bem-vindx a <br> Hogwarts, aproveite o loop infinito de <br> comida
                             e clique no botão abaixo para <br> usar o vira-tempo e <br> reiniciar este teste.
                         </p>
                     </div>
@@ -164,9 +184,14 @@
                 </div>
             </div>
         </div>
+        </div>
 
-        <!-- Tela 3.1 CRIAR QUIZZES-->
 
+
+
+
+        <!-- Tela 3.1-->
+    <div class="tela3 hide">
         <div class="container basics">
             <h3>Comece pelo começo</h3>
             <section class="content">
@@ -240,6 +265,7 @@
             <button>Acessar Quizz</button>
             <p>Voltar pra home</p>
         </div>
+    </div>
 
     </main>
 

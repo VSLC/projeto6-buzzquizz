@@ -24,6 +24,12 @@
     gap: 20px;
 }
 
+.quiz-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
 .title-1 {
     display: flex;
     align-items: center;
@@ -70,4 +76,8 @@
     color: #EC362D;
     text-decoration: none;
     font-size: 21px;
+}
+
+.hide {
+    display: none;
 }
