@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/Tela1.css" />
+    <link rel="stylesheet" href="styles/Tela2.css" />
+    <link rel="stylesheet" href="styles/Tela3.css" />
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/main.css">
     <title>Buzzquiz</title>
 </head>
-
 <body>
 
     <!-- Tela 1-->
 
-    <header>
-        <h1 class="logo">BuzzQuiz</h1>
-    </header>
-
+    <header><h1 class="logo">BuzzQuiz</h1></header>
     <main>
         <div class="upfront">
             <div class="create-quiz">
                 <p> Você não criou nenhum <br> quizz ainda :( </p>
-                <a href="/" onclick="mostrarTela3();">Criar Quiz</a>
+                <a href="/" onclick = "mostrarTela3();">Criar Quiz</a>
             </div>
 
             <div class="quizzes">
 
                 <div class="quizzes-title hide">
                     <h3>Seus Quizzes</h3>
-                    <ion-icon name="add-circle" onclick="mostrarTela3();"></ion-icon>
+                    <ion-icon name="add-circle" onclick = "mostrarTela3();"></ion-icon>
                 </div>
 
                 <div class="my-quizzes hide">
@@ -192,8 +191,8 @@
 
 
         <!-- Tela 3.1-->
-
-        <div class="container basics hide">
+    <div class="tela3 hide">
+        <div class="container basics">
             <h3>Comece pelo começo</h3>
             <section class="content">
                 <input type="text" placeholder="Título do seu quizz">
@@ -201,13 +200,13 @@
                 <input type="text" placeholder="Quantidade de perguntas do quizz">
                 <input type="text" placeholder="Quantidade de níveis do quizz">
             </section>
-            <button>Prosseguir pra criar perguntas</button>
+            <button onclick="createQuestions()">Prosseguir pra criar perguntas</button>
         </div>
 
         <!-- TELA 3.2 -->
 
         <div class="container ask hide">
-            <h3>Crie suas perguntas</h3>
+            <!-- <h3>Crie suas perguntas</h3>
             <section class="content questions">
                 <h4>Pergunta 1</h4>
                 <article class="question">
@@ -239,30 +238,31 @@
                 <ion-icon name="create-outline"></ion-icon>
             </section>
 
-            <button>Prosseguir pra criar níveis</button>
+            <button onclick="createLevels()">Prosseguir pra criar níveis</button> -->
         </div>
 
         <!-- TELA 3.3 -->
 
         <div class="container levels hide">
-            <h3>Agora, decida os níveis</h3>
+            <!-- <h3>Agora, decida os níveis</h3>
             <section class="content questions">
                 <h3>Nível 1</h3>
                 <input type="text" placeholder="Título do nível">
                 <input type="text" placeholder="% de acerto mínima">
                 <input type="text" placeholder="URL da imagem do nível">
                 <input type="text" placeholder="Descrição do nível">
-            </section>
+            </section> -->
 
-            <section class="content hidden">
+            <!-- ---------------------------- -->
+
+            <!-- <section class="content hidden">
                 <h4>Nível 2</h4>
                 <ion-icon name="create-outline"></ion-icon>
             </section>
-
-            <!-- TELA 3.4 -->
-
-            <button>Finalizar Quizz</button>
+            <button onclick="finishQuizz()">Finalizar Quizz</button> -->
         </div>
+
+        <!-- TELA 3.4 -->
 
         <div class="container finish hide">
             <h3>Seu quizz está pronto!</h3>
@@ -273,6 +273,7 @@
             <button>Acessar Quizz</button>
             <p>Voltar pra home</p>
         </div>
+    </div>
 
 
     </main>
