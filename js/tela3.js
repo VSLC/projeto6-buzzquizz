@@ -32,15 +32,6 @@ let quizz = {
 let questionsNumber = 0;
 let levelsNumber = 0;
 
-function mostrarTela3() {
-    const upFront = document.querySelector(".upfront");
-    upFront.classList.add("hide");
-    const tela3 = document.querySelector(".tela3");
-    tela3.classList.remove("hide");
-    console.log(tela3);
-    console.log(upFront);
-}
-
 function isValidURL(string) {
     const res = string.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
     return (res !== null)
