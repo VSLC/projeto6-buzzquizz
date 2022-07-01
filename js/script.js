@@ -159,6 +159,7 @@ function createLevels(){
     let levelScreen = document.querySelector(".levels");
     questionScreen.classList.add("hide");
     levelScreen.classList.remove("hide");
+    
     levelScreen.innerHTML += `<h3>Agora, decida os níveis</h3>`;
 
     for(let i=0; i<levelsNumber; i++){
@@ -171,20 +172,22 @@ function createLevels(){
             <input type="text" placeholder="URL da imagem do nível">
             <input type="text" placeholder="Descrição do nível">
         </section>
-        <section class="content hiden some">
+
+        <section class="content hidden hide">
             <h4>Nível ${i+1}</h4>
             <ion-icon name="create-outline" onclick="showLevel(this)"></ion-icon>
         </section>
         </div>`;
         }else{
             levelScreen.innerHTML += `<div class="level${i+1}">
-            <section class="content questions some">
+            <section class="content questions hide">
             <h3>Nível ${i+1}</h3>
             <input type="text" placeholder="Título do nível">
             <input type="text" placeholder="% de acerto mínima">
             <input type="text" placeholder="URL da imagem do nível">
             <input type="text" placeholder="Descrição do nível">
         </section>
+
         <section class="content hidden">
             <h4>Nível ${i+1}</h4>
             <ion-icon name="create-outline" onclick="showLevel(this)"></ion-icon>

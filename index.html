@@ -3,6 +3,10 @@
 <head>
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/Tela1.css" />
+    <link rel="stylesheet" href="styles/Tela2.css" />
+    <link rel="stylesheet" href="styles/Tela3.css" />
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -166,7 +170,7 @@
 
         <!-- Tela 3.1-->
 
-        <div class="container basics hide">
+        <div class="container basics">
             <h3>Comece pelo começo</h3>
             <section class="content">
                 <input type="text" placeholder="Título do seu quizz">
@@ -174,13 +178,13 @@
                 <input type="text" placeholder="Quantidade de perguntas do quizz">
                 <input type="text" placeholder="Quantidade de níveis do quizz">
             </section>
-            <button>Prosseguir pra criar perguntas</button>
+            <button onclick="createQuestions()">Prosseguir pra criar perguntas</button>
         </div>
 
         <!-- TELA 3.2 -->
 
         <div class="container ask hide">
-            <h3>Crie suas perguntas</h3>
+            <!-- <h3>Crie suas perguntas</h3>
             <section class="content questions">
                 <h4>Pergunta 1</h4>
                 <article class="question">
@@ -212,7 +216,7 @@
                 <ion-icon name="create-outline"></ion-icon>
             </section>
 
-            <button>Prosseguir pra criar níveis</button>
+            <button onclick="createLevels()">Prosseguir pra criar níveis</button> -->
         </div>
 
         <!-- TELA 3.3 -->
