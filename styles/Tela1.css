@@ -10,6 +10,26 @@
 .ion-icon-1 {
     margin-left: 10px;
 }
+.quizz{
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.titulo1{
+    word-break: break-all;
+    width: 301px;
+    height: 54px;
+    position: absolute;
+    color:white;
+    bottom: 0;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .create-quiz {
     margin: 50px 0;

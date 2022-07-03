@@ -114,6 +114,36 @@
     text-align: center;
     margin: -30px 0px 20px 0px;
 }
+.quiz-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 1em;
+}
+.titulo1{
+    word-break: break-all;
+    width: 301px;
+    height: 54px;
+    position: absolute;
+    color:white;
+    bottom: 0;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quizz{
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    width: 340px;
+    height: 181px;
+    -webkit-mask-image: linear-gradient(to top, transparent 15%, rgb(0, 0, 0) 100%);
+}
 
 
 
