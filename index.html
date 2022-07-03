@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/Tela1.css" />
     <link rel="stylesheet" href="styles/Tela2.css" />
     <link rel="stylesheet" href="styles/Tela3.css" />
-    
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buzzquiz</title>
 </head>
+
 <body>
 
     <!-- Tela 1 PAGINA DE QUIZ-->
 
-    <header><h1 class="logo">BuzzQuiz</h1></header>
+    <header>
+        <h1 class="logo">BuzzQuiz</h1>
+    </header>
     <main>
-        <div class="upfront">
+        <div class="upfront hide">
             <div class="create-quiz">
                 <p> Você não criou nenhum <br> quizz ainda :( </p>
-                <a href="/" onclick = "mostrarTela3();">Criar Quiz</a>
+                <a href="/" onclick="mostrarTela3();">Criar Quiz</a>
             </div>
 
             <div class="quizzes">
 
                 <div class="quizzes-title hide">
                     <h3>Seus Quizzes</h3>
-                    <ion-icon name="add-circle" onclick = "mostrarTela3();"></ion-icon>
+                    <ion-icon name="add-circle" onclick="mostrarTela3();"></ion-icon>
                 </div>
 
                 <div class="my-quizzes hide">
@@ -51,12 +55,12 @@
 
                 <div class="quiz-list">
                 </div>
-                </div>
+
             </div>
         </div>
 
         <!-- Tela 2-->
-        <div class="tela-2 hide">
+        <div class="tela-2">
 
             <div class="quiz-image">
                 <p class="quiz-title">O quão Potterhead é você?</p>
@@ -139,14 +143,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="quiz-level">
-                    <div class="quiz-grade">
-                        <h4>88% de acerto: Você é praticamente um aluno de Hogwarts!</h4>
-                    </div>
-                    <div class="quiz-image-message">
-                        <div class="quiz-answer-items-2">
-                            <img src="/imgs/cat.png">
-                        </div>
+
+                <div class="quiz-image-message">
+                    <h4>88% de acerto: Você é praticamente um aluno de Hogwarts!</h4>
+                    <div class="quiz-answer-items-2">
+                        <img src="/imgs/cat.png">
                         <p>Parabéns Potterhead! Bem-vindx a <br> Hogwarts, aproveite o loop infinito de <br> comida
                             e clique no botão abaixo para <br> usar o vira-tempo e <br> reiniciar este teste.
                         </p>
@@ -168,20 +169,20 @@
 
 
         <!-- Tela 3.1-->
-    <div class="tela3 hide">
-        <div class="container basics">
-            <h3>Comece pelo começo</h3>
-            <section class="content">
-                <input type="text" placeholder="Título do seu quizz">
-                <input type="text" placeholder="URL da imagem do seu quizz">
-                <input type="text" placeholder="Quantidade de perguntas do quizz">
-                <input type="text" placeholder="Quantidade de níveis do quizz">
-            </section>
-            <button onclick="createQuestions()">Prosseguir pra criar perguntas</button>
-        </div>
+        <div class="tela3 hide">
+            <div class="container basics">
+                <h3>Comece pelo começo</h3>
+                <section class="content">
+                    <input type="text" placeholder="Título do seu quizz">
+                    <input type="text" placeholder="URL da imagem do seu quizz">
+                    <input type="text" placeholder="Quantidade de perguntas do quizz">
+                    <input type="text" placeholder="Quantidade de níveis do quizz">
+                </section>
+                <button onclick="createQuestions()">Prosseguir pra criar perguntas</button>
+            </div>
 
-        <div class="container ask hide">
-            <!-- <h3>Crie suas perguntas</h3>
+            <div class="container ask hide">
+                <!-- <h3>Crie suas perguntas</h3>
             <section class="content questions">
                 <h4>Pergunta 1</h4>
                 <article class="question">
@@ -214,10 +215,10 @@
             </section>
 
             <button onclick="createLevels()">Prosseguir pra criar níveis</button> -->
-        </div>
+            </div>
 
-        <div class="container levels hide">
-            <!-- <h3>Agora, decida os níveis</h3>
+            <div class="container levels hide">
+                <!-- <h3>Agora, decida os níveis</h3>
             <section class="content questions">
                 <h3>Nível 1</h3>
                 <input type="text" placeholder="Título do nível">
@@ -226,23 +227,23 @@
                 <input type="text" placeholder="Descrição do nível">
             </section> -->
 
-            <!-- <section class="content hidden">
+                <!-- <section class="content hidden">
                 <h4>Nível 2</h4>
                 <ion-icon name="create-outline"></ion-icon>
             </section>
             <button onclick="finishQuizz()">Finalizar Quizz</button> -->
-        </div>
-
-        <div class="container finish hide">
-            <h3>Seu quizz está pronto!</h3>
-            <div class="quizz-finished">
-                <img src="assets/Rectangle 34.png">
-                <span>O quão Potterhead é você?</span>
             </div>
-            <button>Acessar Quizz</button>
-            <p>Voltar pra home</p>
+
+            <div class="container finish hide">
+                <h3>Seu quizz está pronto!</h3>
+                <div class="quizz-finished">
+                    <img src="assets/Rectangle 34.png">
+                    <span>O quão Potterhead é você?</span>
+                </div>
+                <button>Acessar Quizz</button>
+                <p>Voltar pra home</p>
+            </div>
         </div>
-    </div>
 
     </main>
 
