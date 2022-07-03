@@ -139,7 +139,7 @@
     align-items: center;
     justify-content: center;
 }
-img{
+.upfront img{
     width: 340px;
     height: 181px;
     -webkit-mask-image: linear-gradient(to top, transparent 15%, rgb(0, 0, 0) 100%);
@@ -172,7 +172,7 @@ img{
 
     .upfront {
         display: flex;
-        flex-direction: column;
+        width: max-content;
     }
 
     .margin-mobile {
@@ -189,7 +189,12 @@ img{
     }
 
     .quiz-list {
+        display: flex;  
         flex-direction: column;
-        align-items: center;
+    }
+    .upfront img{
+        width: 50vw;
+        height: 181px;
+        -webkit-mask-image: linear-gradient(to top, transparent 15%, rgb(0, 0, 0) 100%);
     }
 }
