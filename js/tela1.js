@@ -1,8 +1,25 @@
-function mostrarTela3() {
-    const upFront = document.querySelector(".upfront");
-    upFront.classList.add("hide");
-    const tela3 = document.querySelector(".tela3");
-    tela3.classList.remove("hide");
-    console.log(tela3);
-    console.log(upFront);
+let acerto = 0;
+let idQuiz;
+let quiz;
+let cliques = 0;
+
+function comparador() {
+  return Math.random() - 0.5;
 }
+
+function iniciaPagina() {
+  window.scrollTo(0, 0);
+  buscarQuizzes();
+}
+
+
+function mostrarTela3() {
+  const upFront = document.querySelector(".upfront");
+  upFront.classList.add("hide");
+  const tela3 = document.querySelector(".tela3");
+  tela3.classList.remove("hide");
+  console.log(tela3);
+  console.log(upFront);
+}
+
+iniciaPagina();
