@@ -3,8 +3,8 @@ const main = document.querySelector(".main");
 let local_user_quizzes = getLocalQuizzesIDs();
 let new_quizz = null
 let quizzQuestions = [];
-let questionsAnswers = [];
-let answeredQuestions = 0;
+let answeredQuestions = 1;
+let levels = []
 
 getAllQuizzes();
 
@@ -42,8 +42,10 @@ function getAllQuizzes(){
 //generate the thumbnails
 function showMainPage(response) {
     const quizzes = response.data;
-    main.innerHTML = `<div class="user-quizzes-title"><h1 class="title">Seus Quizzes</h1>
+    main.innerHTML = `<div class="user-quizzes-title">
+                        <h1 class="title">Seus Quizzes</h1>
                         <ion-icon class="icon" name="add-circle" onclick="createQuizzForm()"></ion-icon>
+                        </div>  
                         <ul class="user-quizzes"></ul>
                         <h1 class="title">Todos os Quizzes</h1>
                         <ul class="other-quizzes"></ul`;
@@ -164,7 +166,7 @@ function validateQuizzData(){
     const img_url = document.querySelector(".URL").value;
     const number_of_questions = document.querySelector(".questions-number").value;
     const number_of_levels = document.querySelector(".levels-number").value;
-    const data_is_valid = checkStringLength(title, 20) && isValidURL(img_url) && number_of_questions >= 3 && number_of_levels >= 2
+    const data_is_valid = checkTitleLength(title, 20) && isValidURL(img_url) && number_of_questions >= 3 && number_of_levels >= 2
     if(data_is_valid){
         new_quizz = newQuizzObject(number_of_questions, number_of_levels);
         quizz.title = title;
@@ -498,7 +500,7 @@ function getQuizz(response){
     main.innerHTML = `  <div class="banner" id="banner-img">
                         </div>
                         <div class="quizz-title" >
-                            <h1></h1> 
+                            <h1 class="title-quizz"></h1> 
                         </div>
                         <ul>
                         </ul> `;
@@ -526,7 +528,9 @@ function showQuestions(quizzQuestions){
         for(let j = 0; j < quizzAnswers.length; j++){
             answers.innerHTML +=`<option class="answer" onclick="selectAnswer(this)" id="${quizzAnswers[j].isCorrectAnswer}">
                                     <img src="${quizzAnswers[j].image}" >
-                                    <strong>${quizzAnswers[j].text}</strong>
+                                    <div class="quizz-answer-text">
+                                    ${quizzAnswers[j].text}
+                                    </div>
                                 </option>`;
 
         }
@@ -600,4 +604,13 @@ function calcRightAnswers(){
     let point = trueAnswers.length/questionsAnswers.length;
     console.log(point);
     return Math.round(point*100)
+}
+
+function showLevels(){
+    let point = calcRightAnswers();
+    for (let i = levels.length-1; i>= 0; i--){
+        if(point > levels[i].minValue){
+            return levels[i];
+        }
+    }
 } 
