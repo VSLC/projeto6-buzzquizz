@@ -7,6 +7,7 @@
 body {
     background-color: #fafafafa;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 header {
@@ -27,6 +28,7 @@ header h1{
     font-weight: bold;
     font-size: 37px;
     color: #fff;
+    cursor: pointer;
 }
 
 .main {
@@ -35,6 +37,8 @@ header h1{
     width: 1051px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .title{
@@ -49,6 +53,7 @@ header h1{
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    align-self: flex-start;
 }
 
 .user-quizzes-title h1{
@@ -66,6 +71,7 @@ h2.title{
 .user-quizzes-title .icon{
     color: #ec362d;
     font-size: 30px;
+    cursor: pointer;
 }
   
 ul.user-quizzes, 
@@ -73,6 +79,7 @@ ul.other-quizzes{
     margin-bottom: 30px;
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
     justify-content: space-between;
 }
   
@@ -102,6 +109,7 @@ ul.other-quizzes{
     border-radius: 50px;
     font-size: 21px;
     color: #ec362d;
+    cursor: pointer;
   }
   .quizz-thumbnail{
     position: relative;
@@ -138,6 +146,7 @@ ul.other-quizzes{
     border-radius: 5px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%,
      rgba(0, 0, 0, 0.5) 64.58%, #000000 100%);
+    cursor: pointer;
 }
 
 .content{
@@ -155,6 +164,8 @@ ul.other-quizzes{
     margin-bottom: 9px;
     border: 1px solid #d1d1d1;
     border-radius: 5px;
+    outline: none;
+    padding-left: 15px;  
 }
 
 .form-button{
@@ -167,6 +178,7 @@ ul.other-quizzes{
     color: white;
     font-size: 21px;
     align-self: center;
+    cursor: pointer;
 }
 
 .forms{
@@ -260,6 +272,7 @@ p{
 }
 
 .banner{
+    top: -31px;
     width: 100vw;
     height: 20vh;
     background-image: url(https://alivreouvertdotnet.files.wordpress.com/2014/12/poudlard.jpg);
@@ -270,7 +283,7 @@ p{
 .quizz-title{
     display: flex;
     position: absolute;
-    top:0;
+    top: 50px;
     left: 0;
     height: 20vh;
     width: 100vw;
@@ -380,15 +393,35 @@ p{
     color: #ffffff;
     font-size: 20px;
     text-align: center;
-    width: 10%;
+    width: 35%;
     height: 5vh;
     margin: 2% 0 2% 0;
     border: none;
+    cursor: pointer;
 }
 .back-home{
     color: rgba(129, 129, 129, 1);
     font-size: 20px;
     margin-bottom: 5%;
+    cursor: pointer;
+}
+
+.quizz-answer-text{
+    display:block;
+    width: 400px;
+    font-weight: 700;
+    white-space: nowrap;
+    /* overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word; */
+}
+
+option{
+    overflow: hidden;
+}
+
+.level-text{
+    overflow: hidden;   
 }
 
 /* MOBILE */
@@ -413,6 +446,10 @@ p{
         justify-content: space-around;
     }
 
+    /* .no-user-quizzes{
+        width: 90vw;
+    } */
+
     .forms-container{
         width: 100%;
     }
@@ -430,7 +467,8 @@ p{
     }
 
     .question-quizz{
-        font-size: 22px;  
+        font-size: 22px;
+        overflow: hidden;
     } 
 }
 

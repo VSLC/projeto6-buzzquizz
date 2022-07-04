@@ -3,8 +3,10 @@ const main = document.querySelector(".main");
 let local_user_quizzes = getLocalQuizzesIDs();
 let new_quizz = null
 let quizzQuestions = [];
+let questionsAnswers = [];
 let answeredQuestions = 1;
 let levels = []
+let restartQuizzObject;
 
 getAllQuizzes();
 
@@ -52,7 +54,11 @@ function showMainPage(response) {
 
     const user_quizzes_list = document.querySelector(".user-quizzes");
     const other_quizzes_list = document.querySelector(".other-quizzes");
-    if(local_user_quizzes.length === 0){
+    let still_in_server = false;
+    for(let i=0; i<quizzes.length; i++){
+        still_in_server = local_user_quizzes.indexOf(quizzes[i].id) >= 0;
+    }
+    if(local_user_quizzes.length === 0 || !still_in_server){
         user_quizzes_list.innerHTML = `<li class="no-user-quizzes">
                                             <span>Você não criou nenhum quizz ainda :(</span>
                                             <button onclick="createQuizzForm()">Criar Quizz</button>
@@ -152,7 +158,7 @@ function createQuizzForm(){
     main.classList.add("forms");
     main.innerHTML = `  <h1 class="form-title">Comece pelo começo</h1>
                         <section class="content">
-                            <input class="quizz-title" type="text" placeholder="Título do seu quizz">
+                            <input class="quizz-title-input" type="text" placeholder="Título do seu quizz">
                             <input class="URL" type="url" placeholder="URL da imagem do seu quizz">
                             <input class="questions-number" type="text" placeholder="Quantidade de perguntas do quizz">
                             <input class="levels-number" type="text" placeholder="Quantidade de níveis do quizz">
@@ -162,7 +168,7 @@ function createQuizzForm(){
 
 //validates the data and starts filling the new_quizz objec
 function validateQuizzData(){
-    const title = document.querySelector(".quizz-title").value;
+    const title = document.querySelector(".quizz-title-input").value;
     const img_url = document.querySelector(".URL").value;
     const number_of_questions = document.querySelector(".questions-number").value;
     const number_of_levels = document.querySelector(".levels-number").value;
@@ -470,33 +476,35 @@ function finishQuizz(object){
 function showCreatedQuizz(object){
     main.innerHTML = `<div class="finish">
                             <h1 class="title">Seu quizz está pronto!</h1>
-                            <div class="quizz-finished">
+                            <div id="${object.data.id}" class="quizz-finished onclick="startQuizz(this)"">    
                                 <img src=${object.data.image}>
                                 <span>${object.data.title}</span>
                             </div>        
-                            <button class="form-button">Acessar Quizz</button>
-                            <p>Voltar pra home</p>
-                        </div>`
+                            <button id="${object.data.id}" class="form-button" onclick="startQuizz(this)">Acessar Quizz</button>
+                            <p onclick="backHome()">Voltar pra home</p>
+                        </div>`;
 } 
 
 function startQuizz(thumbnail){
+    restartQuizzObject = thumbnail;
     const quizz_id = thumbnail.getAttribute("id");
     let promise = axios.get(quizz_url + "quizzes/" + quizz_id);
     promise.then(getQuizz);
     quizzQuestions = [];
     questionsAnswers = [];
-    answeredQuestions = 0;
+    answeredQuestions = 1;
 }
 
 function getQuizz(response){ 
 
     quizzTitle(response.data);
     quizzQuestions = response.data.questions;
+    levels = response.data.levels
     showQuestions(quizzQuestions);
  }
 
  function quizzTitle(title){
-
+    const main = document.querySelector("main");
     main.innerHTML = `  <div class="banner" id="banner-img">
                         </div>
                         <div class="quizz-title" >
@@ -506,14 +514,13 @@ function getQuizz(response){
                         </ul> `;
     const quizzTitle = document.querySelector('.quizz-title h1');
     const bannerImg = title.image;
-    document.getElementById('banner-img').style.backgroundImage = `url(${bannerImg})`;;
-    quizzTitle.innerHTML = title.title; 
+    document.getElementById('banner-img').style.backgroundImage = `url(${bannerImg})`;
+    quizzTitle.innerHTML = title.title;
+    quizzTitle.scrollIntoView();
 }
 
 function showQuestions(quizzQuestions){
     const questions = document.querySelector("ul")
-    let o = 0;
-    let p = 0;
     for(let i = 0; i < quizzQuestions.length; i++){
         questions.innerHTML +=` <li class="question-box" >
                                     <div class="question-quizz">
@@ -522,6 +529,8 @@ function showQuestions(quizzQuestions){
                                     <div class="answers" id="${i}">
                                     </div>
                                 </li>`;
+        let questionColor = document.querySelectorAll(".question-box > .question-quizz");
+        questionColor[i].style.backgroundColor = quizzQuestions[i].color;
         let = quizzAnswers = quizzQuestions[i].answers;
         quizzAnswers.sort(sortAnswers);
         let answers = document.getElementById(i);
@@ -539,8 +548,7 @@ function showQuestions(quizzQuestions){
 }
 
 function sortAnswers(){
-
-    return Math.floor(Math.random() * 10);
+    return Math.random() - 0.5;
 }
 
 function selectAnswer(element){
@@ -577,7 +585,7 @@ function endQuizz(){
     const main = document.querySelector("main");
     main.innerHTML += ` <div class="end-quizz-box">
                             <div class="end-quizz-title">
-                                <h2><strong>${calcRightAnswers()}% de acerto: ${showLevels().title}</strong></h2>
+                                <h3><strong>${calcRightAnswers()}% de acerto: ${showLevels().title}</strong></h3>
                             </div>
                             <div class="end-quizz-img-message">
                                 <img src="${showLevels().image}">
@@ -603,14 +611,35 @@ function calcRightAnswers(){
     console.log("total: ", questionsAnswers.length);
     let point = trueAnswers.length/questionsAnswers.length;
     console.log(point);
-    return Math.round(point*100)
+    return Math.round(point*100);
 }
 
 function showLevels(){
     let point = calcRightAnswers();
+    levels.sort(order);
     for (let i = levels.length-1; i>= 0; i--){
         if(point > levels[i].minValue){
             return levels[i];
         }
     }
+} 
+
+function restartQuizz(){
+    questionsAnswers = [];
+    answeredQuestions = 1;
+}
+
+function backHome(){
+    main.classList.remove("forms");
+    getAllQuizzes();
+} 
+
+function order(a, b){
+    if(a.minValue < b.minValue){
+        return -1;
+    }
+    if(a.minValue > b.minValue){
+        return 1;
+    }
+    return 0;
 } 
