@@ -22,7 +22,7 @@
         <h1 class="logo">BuzzQuiz</h1>
     </header>
     <main>
-        <div class="upfront hide">
+        <div class="upfront">
             <div class="create-quiz">
                 <p> Você não criou nenhum <br> quizz ainda :( </p>
                 <a href="/" onclick="mostrarTela3();">Criar Quiz</a>
@@ -32,7 +32,7 @@
 
                 <div class="quizzes-title hide">
                     <h3>Seus Quizzes</h3>
-                    <ion-icon name="add-circle" onclick="mostrarTela3();"></ion-icon>
+                    <ion-icon name="add-circle" c></ion-icon>
                 </div>
 
                 <div class="my-quizzes hide">
@@ -60,31 +60,34 @@
         </div>
 
         <!-- Tela 2-->
-        <div class="tela-2">
-
-            <div class="quiz-image">
-                <p class="quiz-title">O quão Potterhead é você?</p>
+        <div class="tela-2 hide">
+            <div class="banner">
+                <div class="quiz-image">
+                    <img src="imgs/HP.png" alt="">
+                    <p class="quiz-title">O quão Potterhead é você?</p>
+                </div>
             </div>
+
 
             <div class="container">
                 <div class="quiz-container">
                     <div class="quiz-question">
                         <h4>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</h4>
                     </div>
-                    <div class="quiz-answer">
-                        <div class="quiz-answer-items">
+                    <div class="quiz-answer question1">
+                        <div class="quiz-answer-items " onclick="EscolherResp1(this)">
                             <img src="/imgs/cat.png">
                             <p>gatineo</p>
                         </div>
-                        <div class="quiz-answer-items">
+                        <div class="quiz-answer-items " onclick="EscolherResp1(this)">
                             <img src="/imgs/cat.png">
                             <p>gatineo</p>
                         </div>
-                        <div class="quiz-answer-items">
+                        <div class="quiz-answer-items "onclick="EscolherResp1(this)">
                             <img src="/imgs/cat.png">
                             <p>gatineo</p>
                         </div>
-                        <div class="quiz-answer-items">
+                        <div class="quiz-answer-items"onclick="EscolherResp1(this)">
                             <img src="/imgs/cat.png">
                             <p>gatineo</p>
                         </div>
@@ -97,20 +100,20 @@
                             <h4>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</h4>
                         </div>
                     </div>
-                    <div class="quiz-answer">
-                        <div class="quiz-answer-items">
+                    <div class="quiz-answer question2">
+                        <div class="quiz-answer-items" onclick="EscolherResp2(this)">
                             <img src="/imgs/cat.png">
                             <p>gatineo</p>
                         </div>
-                        <div class="quiz-answer-items">
+                        <div class="quiz-answer-items" onclick="EscolherResp2(this)">
                             <img src="/imgs/cat.png">
                             <p>gatineo</p>
                         </div>
-                        <div class="quiz-answer-items">
+                        <div class="quiz-answer-items" onclick="EscolherResp2(this)">
                             <img src="/imgs/cat.png">
                             <p>gatineo</p>
                         </div>
-                        <div class="quiz-answer-items">
+                        <div class="quiz-answer-items" onclick="EscolherResp2(this)">
                             <img src="/imgs/cat.png">
                             <p>gatineo</p>
                         </div>
@@ -120,24 +123,24 @@
 
                 <div class="quiz-container">
                     <div class="quiz-question">
-                        <div class="quiz-question-header">
+                        <div class="quiz-question-header" onclick="EscolherResp(this)">
                             <h4>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</h4>
                         </div>
                     </div>
-                    <div class="quiz-answer">
-                        <div class="quiz-answer-items">
+                    <div class="quiz-answer question3">
+                        <div class="quiz-answer-items" onclick="EscolherResp3(this)">
                             <img src="/imgs/cat.png">
                             <p>gatineo</p>
                         </div>
-                        <div class="quiz-answer-items">
+                        <div class="quiz-answer-items" onclick="EscolherResp3(this)">
                             <img src="/imgs/cat.png">
                             <p>gatineo</p>
                         </div>
-                        <div class="quiz-answer-items">
+                        <div class="quiz-answer-items" onclick="EscolherResp3(this)">
                             <img src="/imgs/cat.png">
                             <p>gatineo</p>
                         </div>
-                        <div class="quiz-answer-items">
+                        <div class="quiz-answer-items" onclick="EscolherResp3(this)">
                             <img src="/imgs/cat.png">
                             <p>gatineo</p>
                         </div>
