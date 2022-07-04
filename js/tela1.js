@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 let acerto = 0;
 let idQuiz;
 let quiz;
@@ -24,16 +23,6 @@ function mostrarTela3() {
 }
 
 iniciaPagina();
-=======
-
-function mostrarTela3() {
-    const upFront = document.querySelector(".upfront");
-    upFront.classList.add("hide");
-    const tela3 = document.querySelector(".tela3");
-    tela3.classList.remove("hide");
-    console.log(tela3);
-    console.log(upFront);
-}
 
 function SearchAllQuizezz() {
         console.log('rodou')
@@ -65,4 +54,3 @@ function error(){
     alert('Deu erro')
 }
 SearchAllQuizezz()
->>>>>>> 05b67ec69b495006c05d1296ab5413b68fe3f289
