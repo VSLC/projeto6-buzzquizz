@@ -39,8 +39,8 @@ function getAllQuizzes(){
 //generate the thumbnails
 function showMainPage(response) {
     const quizzes = response.data;
-    main.innerHTML = `<div class = 'title user-quizzes'><h1>Seus Quizzes</h1>
-                        <ion-icon class= "icon" name="add-circle" onclick="createQuizzForm()"></ion-icon>
+    main.innerHTML = `<div class="user-quizzes-title"><h1 class="title">Seus Quizzes</h1>
+                        <ion-icon class="icon" name="add-circle" onclick="createQuizzForm()"></ion-icon>
                         <ul class="user-quizzes"></ul>
                         <h1 class="title">Todos os Quizzes</h1>
                         <ul class="other-quizzes"></ul`;
@@ -358,39 +358,39 @@ function atLeastOneZero(array){
 }
 
 function createLevelsForm(){
-    main.innerHTML = `<h1 class="title">Agora, decida os níveis</h3>
-                        <div class="container levels"></div>`;
-    const levels_form_container = main.querySelector(".container.levels");
-
+    main.innerHTML = `<h1 class="title">Agora, decida os níveis</h1>
+                        <div class="levels"></div>`;
+        const levels_form_container = main.querySelector(".levels");
+        
     for(let i=0; i<quizz.levels.length; i++){ 
         if(i === 0){
             levels_form_container.innerHTML +=  `<div class="container-level">
             <section class="content questions showing-level">
-            <h2 class="title">Nível ${i+1}</h2>
-            <input class="level-title" type="text" placeholder="Título do nível">
-            <input class="min-percent" type="text" placeholder="% de acerto mínima">
-            <input class="level-URL" type="text" placeholder="URL da imagem do nível">
-            <input class="description" type="text" placeholder="Descrição do nível">
-        </section>
-        <section class="content hidden hide">
-            <h2 class="title">Nível ${i+1}</h2>
-            <ion-icon name="create-outline" onclick="showLevel(this)"></ion-icon>
-        </section>
+                <h class="title"2>Nível ${i+1}</h2>
+                <input class="level-title" type="text" placeholder="Título do nível">
+                <input class="min-percent" type="text" placeholder="% de acerto mínima">
+                <input class="level-URL" type="text" placeholder="URL da imagem do nível">
+                <input class="description" type="text" placeholder="Descrição do nível">
+            </section>
+            <section class="content hidden hide">
+                <h2 class"title">Nível ${i+1}</h2>
+                <ion-icon name="create-outline" onclick="showLevel(this)"></ion-icon>
+            </section>
         </div>`;
         }
         else {
             levels_form_container.innerHTML +=`<div class="container-level">
             <section class="content questions hide">
-            <h2 class="title">Nível ${i+1}</h2>
-            <input class="level-title" type="text" placeholder="Título do nível">
-            <input class="min-percent" type="text" placeholder="% de acerto mínima">
-            <input class="level-URL" type="text" placeholder="URL da imagem do nível">
-            <input class="description" type="text" placeholder="Descrição do nível">
-        </section>
-        <section class="content hidden">
-            <h2 class="title">Nível ${i+1}</h2>
-            <ion-icon name="create-outline" onclick="showLevel(this)"></ion-icon>
-        </section>
+                <h2 class="title">Nível ${i+1}</h2>
+                <input class="level-title" type="text" placeholder="Título do nível">
+                <input class="min-percent" type="text" placeholder="% de acerto mínima">
+                <input class="level-URL" type="text" placeholder="URL da imagem do nível">
+                <input class="description" type="text" placeholder="Descrição do nível">
+            </section>
+            <section class="content hidden">
+                <h2 class="title">Nível ${i+1}</h2>
+                <ion-icon name="create-outline" onclick="showLevel(this)"></ion-icon>
+            </section>
         </div>`;
         }
     }
