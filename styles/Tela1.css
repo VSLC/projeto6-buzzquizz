@@ -1,6 +1,6 @@
 /* TELA 1 */
 
-
+/* 
 .title{
   display: flex;
   align-items: center;
@@ -114,7 +114,7 @@ ul.other-quizzes{
   ul.other-quizzes{
       justify-content: space-around;
   }
-} 
+}  */
 
 /* .upfront {
   display: flex;
