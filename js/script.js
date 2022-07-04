@@ -2,6 +2,9 @@ const quizz_url = "https://mock-api.driven.com.br/api/v7/buzzquizz/"
 const main = document.querySelector(".main");
 let local_user_quizzes = getLocalQuizzesIDs();
 let new_quizz = null
+let quizzQuestions = [];
+let questionsAnswers = [];
+let answeredQuestions = 0;
 
 getAllQuizzes();
 
@@ -104,6 +107,15 @@ function newQuizzObject(questions, levels){
 
 //verifies if a string is at least 20 characters long
 function checkStringLength(string, length){
+    if(!string){
+        return false;
+    }
+    else{
+        return string.length >= length;
+    }
+}
+
+function checkTitleLength(string, length){
     if(!string){
         return false;
     }
@@ -454,13 +466,138 @@ function finishQuizz(object){
 }
 
 function showCreatedQuizz(object){
-    main.innerHTML = `<div class="forms-container finish">
-                            <h3>Seu quizz está pronto!</h3>
+    main.innerHTML = `<div class="finish">
+                            <h1 class="title">Seu quizz está pronto!</h1>
                             <div class="quizz-finished">
                                 <img src=${object.data.image}>
                                 <span>${object.data.title}</span>
                             </div>        
-                            <button>Acessar Quizz</button>
+                            <button class="form-button">Acessar Quizz</button>
                             <p>Voltar pra home</p>
                         </div>`
+} 
+
+function startQuizz(thumbnail){
+    const quizz_id = thumbnail.getAttribute("id");
+    let promise = axios.get(quizz_url + "quizzes/" + quizz_id);
+    promise.then(getQuizz);
+    quizzQuestions = [];
+    questionsAnswers = [];
+    answeredQuestions = 0;
+}
+
+function getQuizz(response){ 
+
+    quizzTitle(response.data);
+    quizzQuestions = response.data.questions;
+    showQuestions(quizzQuestions);
+ }
+
+ function quizzTitle(title){
+
+    main.innerHTML = `  <div class="banner" id="banner-img">
+                        </div>
+                        <div class="quizz-title" >
+                            <h1></h1> 
+                        </div>
+                        <ul>
+                        </ul> `;
+    const quizzTitle = document.querySelector('.quizz-title h1');
+    const bannerImg = title.image;
+    document.getElementById('banner-img').style.backgroundImage = `url(${bannerImg})`;;
+    quizzTitle.innerHTML = title.title; 
+}
+
+function showQuestions(quizzQuestions){
+    const questions = document.querySelector("ul")
+    let o = 0;
+    let p = 0;
+    for(let i = 0; i < quizzQuestions.length; i++){
+        questions.innerHTML +=` <li class="question-box" >
+                                    <div class="question-quizz">
+                                         ${quizzQuestions[i].title}
+                                    </div> 
+                                    <div class="answers" id="${i}">
+                                    </div>
+                                </li>`;
+        let = quizzAnswers = quizzQuestions[i].answers;
+        quizzAnswers.sort(sortAnswers);
+        let answers = document.getElementById(i);
+        for(let j = 0; j < quizzAnswers.length; j++){
+            answers.innerHTML +=`<option class="answer" onclick="selectAnswer(this)" id="${quizzAnswers[j].isCorrectAnswer}">
+                                    <img src="${quizzAnswers[j].image}" >
+                                    <strong>${quizzAnswers[j].text}</strong>
+                                </option>`;
+
+        }
+        answers = [];   
+    }
+}
+
+function sortAnswers(){
+
+    return Math.floor(Math.random() * 10);
+}
+
+function selectAnswer(element){
+    const answers = element.parentNode.querySelectorAll(".answers > .answer")
+    for(let i = 0; i<answers.length; i++){
+        answers[i].classList.add("opac");
+        answers[i].onclick = '';
+        if(answers[i].id === 'true'){
+            answers[i].classList.add("green");
+        }else{
+            answers[i].classList.add("red");
+        }
+
+    }
+    element.classList.remove("opac");
+    questionsAnswers.push(element.id);
+    if(answeredQuestions === element.parentNode.parentNode.parentNode.childElementCount){
+        setTimeout(endQuizz, 2000);
+
+    }
+    answeredQuestions++;
+    console.log(questionsAnswers);
+    setTimeout(scrollQuestion, 2000, element);
+}
+
+function scrollQuestion(element){
+    let questionsBox = element.parentNode.parentNode;
+    if(questionsBox.nextElementSibling !== null){
+        questionsBox.nextElementSibling.scrollIntoView();
+    }
+}
+
+function endQuizz(){
+    const main = document.querySelector("main");
+    main.innerHTML += ` <div class="end-quizz-box">
+                            <div class="end-quizz-title">
+                                <h2><strong>${calcRightAnswers()}% de acerto: ${showLevels().title}</strong></h2>
+                            </div>
+                            <div class="end-quizz-img-message">
+                                <img src="${showLevels().image}">
+                                <p>
+                                    ${showLevels().text}
+                                </p>
+                            </div>
+                        </div>
+                        <button class="restart-quizz" onclick="restartQuizz()"> Reiniciar Quizz</button>
+                        <p class="back-home" onclick="backHome()">Voltar para a home</p>`;
+    const endQuizz = document.querySelector(".end-quizz-box");
+    endQuizz.scrollIntoView();
+}
+
+function calcRightAnswers(){
+    let trueAnswers = [];
+    for(let i =0 ; i < questionsAnswers.length; i++){
+        if(questionsAnswers[i] === 'true'){
+            trueAnswers.push(questionsAnswers[i]);
+        }
+    }
+    console.log("true: ", trueAnswers.length );
+    console.log("total: ", questionsAnswers.length);
+    let point = trueAnswers.length/questionsAnswers.length;
+    console.log(point);
+    return Math.round(point*100)
 } 
